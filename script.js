@@ -150,7 +150,7 @@ function closeModal() {
 
 async function loadServices() {
     try {
-        const res = await fetch('/api/services');
+        const res = await fetch('services.json');
         servicesData = await res.json();
         renderServices();
     } catch (e) {
@@ -173,7 +173,7 @@ function renderServices() {
 
 async function loadRanks() {
     try {
-        const res = await fetch('/api/ranks');
+        const res = await fetch('ranks.json');
         ranksData = await res.json();
         renderRanks();
     } catch (e) {
@@ -223,52 +223,13 @@ function renderRanks() {
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('recruitmentForm');
     if (form) {
-        form.addEventListener('submit', async function (e) {
+        form.addEventListener('submit', function (e) {
             e.preventDefault();
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalBtnText = submitButton.innerText;
-            submitButton.disabled = true;
-            submitButton.innerHTML = 'Transmitting... <span style="animation: buttonPulse 1s infinite;">⚡';
-
-            let userIP = 'Unknown';
-            try {
-                const ipResponse = await fetch('https://api.ipify.org?format=json');
-                const ipData = await ipResponse.json();
-                userIP = ipData.ip;
-            } catch (error) { console.error('Could not fetch IP:', error); }
-
-            const formData = {
-                name: document.getElementById('name').value,
-                age: document.getElementById('age').value,
-                discord: document.getElementById('discord').value,
-                experience: document.getElementById('experience').value,
-                reason: document.getElementById('reason').value,
-                ip: userIP,
-                timestamp: new Date().toISOString()
-            };
-
-            try {
-                const response = await fetch('/submit-application', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
-                const result = await response.json();
-                if (response.ok && result.success) {
-                    document.getElementById('successModal').classList.remove('hidden');
-                    form.reset();
-                } else {
-                    throw new Error('Submission failed');
-                }
-            } catch (error) {
-                console.error('Error submitting application:', error);
-                alert('Network error. Please try again or contact us directly.');
-                document.getElementById('successModal').classList.remove('hidden');
-                form.reset();
-            } finally {
-                submitButton.disabled = false;
-                submitButton.innerText = originalBtnText;
-            }
+            // Static site: redirect to Discord for applications
+            document.getElementById('successModal').classList.remove('hidden');
+            document.querySelector('#successModal .modal-content p').textContent =
+                'Applications are handled through our Discord server. Join us there to apply!';
+            form.reset();
         });
     }
 });
@@ -313,43 +274,8 @@ adminPasswordInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') adminLoginBtn.click();
 });
 
-adminLoginBtn.addEventListener('click', async () => {
-    const password = adminPasswordInput.value.trim();
-    if (!password) {
-        adminLoginError.textContent = 'Enter a password';
-        return;
-    }
-
-    adminLoginBtn.disabled = true;
-    adminLoginBtn.textContent = 'Authenticating...';
-    adminLoginError.textContent = '';
-
-    try {
-        const res = await fetch('/api/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ password })
-        });
-        const data = await res.json();
-
-        if (data.success) {
-            adminToken = data.token;
-            sessionStorage.setItem('espada_admin_token', adminToken);
-            adminLoginOverlay.classList.add('hidden');
-            adminPasswordInput.value = '';
-            adminLoginError.textContent = '';
-            openDashboard();
-        } else {
-            adminLoginError.textContent = '⛔ Access denied. Wrong password.';
-            adminPasswordInput.value = '';
-            adminPasswordInput.focus();
-        }
-    } catch (e) {
-        adminLoginError.textContent = 'Connection error. Try again.';
-    } finally {
-        adminLoginBtn.disabled = false;
-        adminLoginBtn.textContent = 'Authenticate';
-    }
+adminLoginBtn.addEventListener('click', () => {
+    adminLoginError.textContent = '⚠️ Admin panel requires the server version. This is a static site.';
 });
 
 // --- Admin Dashboard ---
@@ -557,51 +483,7 @@ document.getElementById('confirmAddService').addEventListener('click', () => {
 });
 
 // --- SAVE ALL ---
-adminSaveBtn.addEventListener('click', async () => {
-    adminSaveBtn.disabled = true;
-    adminSaveBtn.textContent = 'Saving...';
-    adminSaveMsg.textContent = 'Saving changes...';
-    adminSaveMsg.className = 'admin-save-msg';
-
-    try {
-        // Save ranks
-        const ranksRes = await fetch('/api/ranks', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${adminToken}`
-            },
-            body: JSON.stringify(editRanks)
-        });
-
-        // Save services
-        const servicesRes = await fetch('/api/services', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${adminToken}`
-            },
-            body: JSON.stringify(editServices)
-        });
-
-        if (ranksRes.ok && servicesRes.ok) {
-            // Update live data
-            ranksData = JSON.parse(JSON.stringify(editRanks));
-            servicesData = JSON.parse(JSON.stringify(editServices));
-            renderServices();
-            renderRanks();
-
-            adminSaveMsg.textContent = '✓ All changes saved successfully!';
-            adminSaveMsg.className = 'admin-save-msg success';
-        } else {
-            throw new Error('Save failed');
-        }
-    } catch (e) {
-        console.error('Save error:', e);
-        adminSaveMsg.textContent = '✕ Failed to save. Check connection.';
-        adminSaveMsg.className = 'admin-save-msg error';
-    } finally {
-        adminSaveBtn.disabled = false;
-        adminSaveBtn.textContent = '💾 SAVE ALL';
-    }
+adminSaveBtn.addEventListener('click', () => {
+    adminSaveMsg.textContent = '⚠️ Saving is disabled on the static site version.';
+    adminSaveMsg.className = 'admin-save-msg error';
 });
