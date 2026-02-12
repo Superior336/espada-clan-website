@@ -1,0 +1,195 @@
+/* OPTIMIZATION PATCH - Faster Transitions & Smooth Scrolling */
+
+/* Speed up all hover transitions */
+* {
+    transition-duration: 0.2s !important;
+}
+
+.glass-card,
+.service-card,
+.tool-card,
+.leader-card,
+.rank-card,
+.member-item,
+.nav-link {
+    transition: all 0.2s ease !important;
+}
+
+/* Instant hover feedback */
+.glass-card:hover,
+.service-card:hover,
+.tool-card:hover {
+    transition: all 0.15s ease !important;
+}
+
+/* Smooth scrolling optimization */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Performance optimization - GPU acceleration (desktop only) */
+@media (hover: hover) and (pointer: fine) {
+
+    .glass-card,
+    .leader-avatar,
+    .service-card,
+    .tool-card {
+        will-change: transform;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+}
+
+/* Mobile: strip heavy effects */
+@media (hover: none) and (pointer: coarse) {
+
+    .glass-card:hover,
+    .service-card:hover,
+    .tool-card:hover,
+    .contact-card:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    .contact-card::before {
+        display: none;
+    }
+}
+
+/* Faster animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-reveal {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, transparent, rgba(220, 20, 60, 0.03), transparent);
+}
+
+.contact-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin: -1rem auto 3rem;
+    max-width: 600px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    padding: 3rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(220, 20, 60, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.contact-card:hover::before {
+    left: 100%;
+}
+
+.contact-icon {
+    margin: 0 auto 1.5rem;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.instagram-gradient {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    box-shadow: 0 8px 30px rgba(225, 48, 108, 0.5);
+}
+
+.discord-gradient {
+    background: linear-gradient(135deg, #7289da, #5865f2);
+    box-shadow: 0 8px 30px rgba(114, 137, 218, 0.5);
+}
+
+.contact-card h3 {
+    font-size: 1.8rem;
+    color: var(--crimson-primary);
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.contact-card p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--crimson-primary);
+}
+
+/* Custom Profile Image Support */
+.leader-avatar {
+    position: relative;
+    overflow: hidden;
+}
+
+.leader-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.avatar-fallback {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--crimson-primary);
+}
+
+/* Mobile optimization for contact */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-card {
+        padding: 2.5rem 2rem;
+    }
+}

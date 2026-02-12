@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espada - Elite Warriors United</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hero-enhancements.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="optimization_patch.css">
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="logo.png" alt="Espada Logo" class="loading-logo-image">
+                <h1 class="loading-text">ESPADA</h1>
+            </div>
+            <div class="loading-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <p class="loading-tagline">Elite Warriors United</p>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                ESPADA
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#tools" class="nav-link">Tools</a></li>
+                <li><a href="#owners" class="nav-link">Owners</a></li>
+                <li><a href="#rankings" class="nav-link">Rankings</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#join" class="nav-link">Join Us</a></li>
+            </ul>
+            <div class="nav-right">
+                <span class="admin-nav-icon" id="adminLoginTrigger" title="Admin Panel">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                </span>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="logo.png" alt="Espada Logo" class="hero-logo-image">
+            </div>
+            <h1 class="hero-title">ESPADA</h1>
+            <p class="hero-subtitle">Elite Warriors. Unbreakable Bonds. Legendary Victories.</p>
+            <p class="hero-description">
+                We are the vanguard of excellence, a brotherhood forged in battle and tempered by victory.
+                Our ranks comprise the finest warriors, strategists, and leaders who stand united under the cybernetic
+                banner.
+            </p>
+            <a href="#join" class="cta-button">Join the Legion</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title scroll-reveal">About the Clan</h2>
+        <div class="about-content">
+            <div class="glass-card about-card scroll-reveal">
+                <div class="about-icon">⚔️</div>
+                <h3>Our Mission</h3>
+                <p>To dominate every battlefield with strategic brilliance, unwavering courage, and absolute precision.
+                    We don't just fight—we conquer with cutting-edge tactics.</p>
+            </div>
+            <div class="glass-card about-card scroll-reveal">
+                <div class="about-icon">🛡️</div>
+                <h3>Our Values</h3>
+                <p>Honor, loyalty, and excellence define every Espada member. We stand together, fight together, and
+                    triumph together as one unstoppable cybernetic force.</p>
+            </div>
+            <div class="glass-card about-card scroll-reveal">
+                <div class="about-icon">🏆</div>
+                <h3>Our Legacy</h3>
+                <p>Countless victories, legendary battles, and an unshakeable reputation. The Espada Clan is synonymous
+                    with dominance, innovation, and prestige.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Dynamic) -->
+    <section id="services">
+        <h2 class="section-title scroll-reveal">Our Services</h2>
+        <div class="services-grid" id="servicesContainer">
+            <!-- Loaded dynamically from /api/services -->
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools">
+        <h2 class="section-title scroll-reveal">Our Custom Tools</h2>
+        <p class="tools-intro scroll-reveal">We craft our own arsenal of powerful utilities to maintain our edge</p>
+        <div class="tools-grid">
+            <div class="glass-card tool-card scroll-reveal">
+                <div class="tool-badge">PREMIUM</div>
+                <h3>Discord Rich Presence</h3>
+                <p>Enhance your Discord profile with custom status displays. Show off your gaming stats, current
+                    activities, and personalized branding in real-time.</p>
+            </div>
+            <div class="glass-card tool-card scroll-reveal">
+                <div class="tool-badge">CUSTOM</div>
+                <h3>Audio Amplifier</h3>
+                <p>Our proprietary audio enhancement tool that boosts and optimizes sound quality far beyond standard
+                    limits. Perfect for voice clarity and impact.</p>
+            </div>
+            <div class="glass-card tool-card scroll-reveal">
+                <div class="tool-badge">ADVANCED</div>
+                <h3>Custom Bots</h3>
+                <p>Specialized automation bots designed in-house for server management, analytics, and interactive
+                    features that standard bots can't replicate.</p>
+            </div>
+            <div class="glass-card tool-card scroll-reveal">
+                <div class="tool-badge">UTILITY</div>
+                <h3>Token Generator</h3>
+                <p>Secure token generation system for authentication, API access, and custom integrations. Built with
+                    security and efficiency in mind.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owners Section -->
+    <section id="owners">
+        <h2 class="section-title scroll-reveal">Clan Founders</h2>
+        <div class="leaders-grid">
+            <div class="glass-card leader-card scroll-reveal">
+                <div class="leader-avatar">
+                    <!-- Replace 'obito.png' with actual profile image -->
+                    <img src="obito.png" alt="ᴏʙɪᴛᴏ"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="avatar-fallback">O</div>
+                </div>
+                <h3 class="leader-name">ᴏʙɪᴛᴏ</h3>
+                <p class="leader-role">Co-Founder • Supreme • SZ Rank</p>
+                <p class="leader-bio">The visionary founder who built Espada from the ground up. A master tactician and
+                    fearless warrior leading us to glory with unmatched strategic prowess.</p>
+            </div>
+            <div class="glass-card leader-card scroll-reveal">
+                <div class="leader-avatar">
+                    <!-- Replace 'aizen.png' with actual profile image -->
+                    <img src="aizen.png" alt="ᴀɪᴢᴇɴ ꜱᴏꜱᴜᴋᴇ"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="avatar-fallback">A</div>
+                </div>
+                <h3 class="leader-name">ᴀɪᴢᴇɴ ꜱᴏꜱᴜᴋᴇ</h3>
+                <p class="leader-role">Founder & Chief Strategist • XS Rank</p>
+                <p class="leader-bio">The brilliant mind behind Espada's most devastating victories. Expert in advanced
+                    warfare tactics and innovation, ensuring our perpetual dominance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rankings Section (Dynamic) -->
+    <section id="rankings">
+        <h2 class="section-title scroll-reveal">Clan Hierarchy</h2>
+        <div class="rankings-container" id="rankingsContainer">
+            <!-- Loaded dynamically from /api/ranks -->
+        </div>
+    </section>
+
+    <!-- Application Section -->
+    <section id="join" class="join-section">
+        <div class="application-container glass-card scroll-reveal">
+            <h2 class="section-title">Join Espada</h2>
+            <p class="app-intro">
+                Think you have what it takes to stand with legends? Complete the application below to begin your
+                journey.
+            </p>
+
+            <form id="recruitmentForm" class="recruitment-form">
+                <div class="input-group">
+                    <input type="text" id="name" required placeholder=" ">
+                    <label for="name">Codename / Name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="number" id="age" required placeholder=" ">
+                    <label for="age">Age</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="discord" required placeholder=" ">
+                    <label for="discord">Discord ID</label>
+                </div>
+
+                <div class="input-group">
+                    <textarea id="experience" required placeholder=" " rows="3"></textarea>
+                    <label for="experience">Combat Experience</label>
+                </div>
+
+                <div class="input-group">
+                    <textarea id="reason" required placeholder=" " rows="3"></textarea>
+                    <label for="reason">Why Espada?</label>
+                </div>
+
+                <button type="submit" class="cta-button">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2 class="section-title scroll-reveal">Contact Us</h2>
+        <p class="contact-intro scroll-reveal">Connect with Espada Clan on your favorite platforms</p>
+        <div class="contact-grid">
+            <a href="https://www.instagram.com/_____kennedy.86/" target="_blank"
+                class="glass-card contact-card scroll-reveal">
+                <div class="contact-icon instagram-gradient">
+                    <svg viewBox="0 0 24 24" width="60" height="60" fill="currentColor">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </div>
+                <h3>Instagram</h3>
+                <p>Follow us for updates and highlights</p>
+            </a>
+            <a href="https://discord.gg/Ce84tsHAgV" target="_blank" class="glass-card contact-card scroll-reveal">
+                <div class="contact-icon discord-gradient">
+                    <svg viewBox="0 0 24 24" width="60" height="60" fill="currentColor">
+                        <path
+                            d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+                    </svg>
+                </div>
+                <h3>Discord</h3>
+                <p>Join our community server</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Success Popup Modal -->
+    <div id="successModal" class="modal hidden">
+        <div class="modal-content glass-card">
+            <div class="modal-icon">✓</div>
+            <h3>Application Submitted!</h3>
+            <p>Your request has been submitted successfully. We will contact you soon.</p>
+            <button class="modal-close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div class="admin-overlay hidden" id="adminLoginOverlay">
+        <div class="admin-login-card">
+            <h2>🔒 ADMIN ACCESS</h2>
+            <p class="admin-subtitle">Authorized personnel only</p>
+            <div class="admin-input-wrap">
+                <input type="password" id="adminPasswordInput" placeholder="Enter admin password" autocomplete="off">
+            </div>
+            <button class="admin-login-btn" id="adminLoginBtn">Authenticate</button>
+            <p class="admin-error" id="adminLoginError"></p>
+            <button class="admin-cancel-btn" id="adminLoginCancel">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard Modal -->
+    <div class="admin-dashboard-overlay hidden" id="adminDashOverlay">
+        <div class="admin-dashboard">
+            <div class="admin-dash-header">
+                <h2>⚡ ADMIN DASHBOARD</h2>
+                <button class="admin-close-btn" id="adminDashClose">✕</button>
+            </div>
+            <div class="admin-tabs">
+                <button class="admin-tab active" data-tab="ranks">⚔️ Ranks</button>
+                <button class="admin-tab" data-tab="services">🛠️ Services</button>
+            </div>
+            <div class="admin-content">
+                <div class="admin-panel active" id="adminRanksPanel">
+                    <div id="adminRanksList"></div>
+                    <div class="admin-add-tier-section">
+                        <button class="admin-add-tier-btn" id="showAddTierForm">+ ADD NEW TIER</button>
+                        <div class="admin-new-tier-form" id="newTierForm">
+                            <div class="form-row">
+                                <input type="text" id="newTierRank" placeholder="Rank (e.g. B+)">
+                                <input type="text" id="newTierTitle" placeholder="Title (e.g. Elite Scouts)">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="newTierBadge" placeholder="Badge (e.g. Scout)">
+                                <input type="text" id="newTierDesc" placeholder="Description...">
+                            </div>
+                            <div class="form-actions">
+                                <button class="admin-add-btn" id="confirmAddTier">Create Tier</button>
+                                <button class="admin-cancel-btn" id="cancelAddTier">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-panel" id="adminServicesPanel">
+                    <div id="adminServicesList"></div>
+                    <div class="admin-add-service-form">
+                        <h4>+ ADD NEW SERVICE</h4>
+                        <div class="form-row">
+                            <input type="text" id="newServiceIcon" placeholder="Emoji" maxlength="4">
+                            <input type="text" id="newServiceTitle" placeholder="Service Title">
+                        </div>
+                        <textarea id="newServiceDesc" placeholder="Service description..." rows="2"
+                            style="width:100%;margin-bottom:0.8rem;"></textarea>
+                        <button class="admin-add-btn" id="confirmAddService">Add Service</button>
+                    </div>
+                </div>
+            </div>
+            <div class="admin-save-bar">
+                <span class="admin-save-msg" id="adminSaveMsg">Changes are auto-tracked</span>
+                <button class="admin-save-btn" id="adminSaveBtn">💾 SAVE ALL</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espada - Elite Warriors United</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">ESPADA</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#owners" class="nav-link">Owners</a></li>
+                <li><a href="#rankings" class="nav-link">Rankings</a></li>
+                <li><a href="#join" class="nav-link">Join Us</a></li>
+            </ul>
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">ESPADA</h1>
+            <p class="hero-subtitle">Elite Warriors. Unbreakable Bonds. Legendary Victories.</p>
+            <p class="hero-description">
+                We are the vanguard of excellence, a brotherhood forged in battle and tempered by victory.
+                Our ranks comprise the finest warriors, strategists, and leaders who stand united under the cybernetic
+                banner.
+            </p>
+            <a href="#join" class="cta-button">Join the Legion</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title scroll-reveal">About the Clan</h2>
+        <div class="about-content">
+            <div class="glass-card about-card scroll-reveal">
+                <div class="about-icon">⚔️</div>
+                <h3>Our Mission</h3>
+                <p>To dominate every battlefield with strategic brilliance, unwavering courage, and absolute precision.
+                    We don't just fight—we conquer with cutting-edge tactics.</p>
+            </div>
+            <div class="glass-card about-card scroll-reveal">
+                <div class="about-icon">🛡️</div>
+                <h3>Our Values</h3>
+                <p>Honor, loyalty, and excellence define every Espada member. We stand together, fight together, and
+                    triumph together as one unstoppable cybernetic force.</p>
+            </div>
+            <div class="glass-card about-card scroll-reveal">
+                <div class="about-icon">🏆</div>
+                <h3>Our Legacy</h3>
+                <p>Countless victories, legendary battles, and an unshakeable reputation. The Espada Clan is synonymous
+                    with dominance, innovation, and prestige.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owners Section -->
+    <section id="owners">
+        <h2 class="section-title scroll-reveal">Clan Founders</h2>
+        <div class="leaders-grid">
+            <div class="glass-card leader-card scroll-reveal">
+                <div class="leader-avatar">V</div>
+                <h3 class="leader-name">Void Superior</h3>
+                <p class="leader-role">Supreme Commander</p>
+                <p class="leader-bio">The visionary founder who built Espada from the ground up. A master tactician and
+                    fearless warrior leading us to glory with unmatched strategic prowess.</p>
+            </div>
+            <div class="glass-card leader-card scroll-reveal">
+                <div class="leader-avatar">K</div>
+                <h3 class="leader-name">Kaizen</h3>
+                <p class="leader-role">Co-Founder & Chief Strategist</p>
+                <p class="leader-bio">The brilliant mind behind Espada's most devastating victories. Expert in advanced
+                    warfare tactics and innovation, ensuring our perpetual dominance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rankings Section -->
+    <section id="rankings">
+        <h2 class="section-title scroll-reveal">Clan Hierarchy</h2>
+        <div class="rankings-container">
+            <div class="glass-card rank-card scroll-reveal" data-rank="1">
+                <div class="rank-number">I</div>
+                <div class="rank-info">
+                    <h3 class="rank-title">Supreme Command</h3>
+                    <p class="rank-description">The ultimate authority and visionary leaders of Espada. Commands all
+                        operations and sets our destiny.</p>
+                </div>
+                <span class="rank-badge">Leadership</span>
+                <span class="expand-icon">▼</span>
+                <div class="rank-members">
+                    <div class="member-list">
+                        <div class="member-item">Void Superior</div>
+                        <div class="member-item">Kaizen</div>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card rank-card scroll-reveal" data-rank="2">
+                <div class="rank-number">II</div>
+                <div class="rank-info">
+                    <h3 class="rank-title">War Council</h3>
+                    <p class="rank-description">Elite generals and strategists who shape our battle plans and guide our
+                        forces to victory.</p>
+                </div>
+                <span class="rank-badge">Command</span>
+                <span class="expand-icon">▼</span>
+                <div class="rank-members">
+                    <div class="member-list">
+                        <div class="member-item">Shadow Reaper</div>
+                        <div class="member-item">Crimson Blade</div>
+                        <div class="member-item">Neon Phantom</div>
+                        <div class="member-item">Cyber Ghost</div>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card rank-card scroll-reveal" data-rank="3">
+                <div class="rank-number">III</div>
+                <div class="rank-info">
+                    <h3 class="rank-title">Veteran Warriors</h3>
+                    <p class="rank-description">Battle-hardened elite who've proven themselves in countless engagements.
+                        Mentors to rising talent.</p>
+                </div>
+                <span class="rank-badge">Elite</span>
+                <span class="expand-icon">▼</span>
+                <div class="rank-members">
+                    <div class="member-list">
+                        <div class="member-item">Frost Viper</div>
+                        <div class="member-item">Thunder Strike</div>
+                        <div class="member-item">Void Walker</div>
+                        <div class="member-item">Plasma Edge</div>
+                        <div class="member-item">Quantum Fury</div>
+                        <div class="member-item">Dark Matter</div>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card rank-card scroll-reveal" data-rank="4">
+                <div class="rank-number">IV</div>
+                <div class="rank-info">
+                    <h3 class="rank-title">Active Warriors</h3>
+                    <p class="rank-description">Core members who fight on the frontlines and execute our strategies with
+                        precision and dedication.</p>
+                </div>
+                <span class="rank-badge">Core</span>
+                <span class="expand-icon">▼</span>
+                <div class="rank-members">
+                    <div class="member-list">
+                        <div class="member-item">Steel Phoenix</div>
+                        <div class="member-item">Echo Blade</div>
+                        <div class="member-item">Nova Strike</div>
+                        <div class="member-item">Zero Gravity</div>
+                        <div class="member-item">Arc Reactor</div>
+                        <div class="member-item">Pulse Wave</div>
+                        <div class="member-item">Ion Storm</div>
+                        <div class="member-item">Titan Force</div>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card rank-card scroll-reveal" data-rank="5">
+                <div class="rank-number">V</div>
+                <div class="rank-info">
+                    <h3 class="rank-title">Recruits</h3>
+                    <p class="rank-description">Promising new warriors earning their place through training, loyalty,
+                        and proving combat prowess.</p>
+                </div>
+                <span class="rank-badge">Rising</span>
+                <span class="expand-icon">▼</span>
+                <div class="rank-members">
+                    <div class="member-list">
+                        <div class="member-item">Digital Ronin</div>
+                        <div class="member-item">Byte Assassin</div>
+                        <div class="member-item">Neon Vanguard</div>
+                        <div class="member-item">Matrix Hunter</div>
+                        <div class="member-item">Code Warrior</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="join-section">
+        <div class="join-content glass-card scroll-reveal">
+            <h2 class="section-title">Join Espada</h2>
+            <p>
+                Think you have what it takes to stand with legends? Espada seeks exceptional warriors
+                who embody courage, skill, and unwavering loyalty. Rise through our ranks and carve your name into cyber
+                history.
+            </p>
+            <a href="#" class="cta-button">Apply Now</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>

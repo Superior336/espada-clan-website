@@ -1,0 +1,119 @@
+/* Hero Logo Styles */
+.hero-logo {
+    margin-bottom: 2rem;
+    animation: logoEntrance 1.5s ease-out;
+}
+
+.hero-logo-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--crimson-primary);
+    box-shadow:
+        0 0 30px rgba(169, 61, 61, 0.8),
+        0 0 60px rgba(169, 61, 61, 0.4),
+        0 8px 32px rgba(0, 0, 0, 0.6);
+    animation: logoPulse 3s ease-in-out infinite, logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoEntrance {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) rotate(-180deg);
+    }
+
+    60% {
+        transform: scale(1.1) rotate(10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes logoPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 30px rgba(169, 61, 61, 0.8),
+            0 0 60px rgba(169, 61, 61, 0.4),
+            0 8px 32px rgba(0, 0, 0, 0.6);
+    }
+
+    50% {
+        box-shadow:
+            0 0 40px rgba(235, 87, 87, 1),
+            0 0 80px rgba(235, 87, 87, 0.6),
+            0 8px 32px rgba(0, 0, 0, 0.6);
+    }
+}
+
+@keyframes logoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animated CTA Button */
+.animated-cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.animated-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.animated-cta:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+.animated-cta:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 40px rgba(235, 87, 87, 0.9),
+        0 12px 48px rgba(169, 61, 61, 0.6);
+}
+
+.animated-cta:active {
+    transform: translateY(0);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero-logo-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .animated-cta {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}

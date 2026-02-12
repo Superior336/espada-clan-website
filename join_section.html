@@ -1,0 +1,48 @@
+    <!-- Application Section -->
+    <section id="join" class="join-section">
+        <div class="application-container glass-card scroll-reveal">
+            <h2 class="section-title">Join Espada</h2>
+            <p class="app-intro">
+                Think you have what it takes to stand with legends? Complete the application below to begin your journey.
+            </p>
+            
+            <form id="recruitmentForm" class="recruitment-form">
+                <div class="input-group">
+                    <input type="text" id="name" required placeholder=" ">
+                    <label for="name">Codename / Name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="number" id="age" required placeholder=" ">
+                    <label for="age">Age</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="discord" required placeholder=" ">
+                    <label for="discord">Discord ID</label>
+                </div>
+
+                <div class="input-group">
+                    <textarea id="experience" required placeholder=" " rows="3"></textarea>
+                    <label for="experience">Combat Experience</label>
+                </div>
+
+                <div class="input-group">
+                    <textarea id="reason" required placeholder=" " rows="3"></textarea>
+                    <label for="reason">Why Espada?</label>
+                </div>
+
+                <button type="submit" class="cta-button">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Success Popup Modal -->
+    <div id="successModal" class="modal hidden">
+        <div class="modal-content glass-card">
+            <div class="modal-icon">✓</div>
+            <h3>Application Submitted!</h3>
+            <p>Your request has been submitted successfully. We will contact you soon.</p>
+            <button class="modal-close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>

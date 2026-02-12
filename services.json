@@ -1,0 +1,26 @@
+[
+  {
+    "id": "discord-bot",
+    "icon": "🤖",
+    "title": "Discord Bot Development",
+    "description": "Custom Discord bots tailored to your server's needs. From moderation to entertainment, we create powerful automation tools with advanced features and seamless integration."
+  },
+  {
+    "id": "website-dev",
+    "icon": "🌐",
+    "title": "Website Development",
+    "description": "Premium websites with stunning design and cutting-edge functionality. We build responsive, fast, and visually captivating web experiences that leave lasting impressions."
+  },
+  {
+    "id": "python-apps",
+    "icon": "🐍",
+    "title": "Python Applications",
+    "description": "Robust Python applications for automation, data processing, and system integration. We deliver efficient, scalable solutions for complex technical challenges."
+  },
+  {
+    "id": "minecraft-server-development",
+    "icon": "⛏️",
+    "title": "Minecraft Server Development",
+    "description": "Custom Minecraft server setup, plugin development, and optimization for high-performance gaming communities."
+  }
+]

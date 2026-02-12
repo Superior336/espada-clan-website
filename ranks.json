@@ -1,0 +1,122 @@
+[
+  {
+    "id": "founders",
+    "rankNumber": "★★",
+    "title": "Founders (SZ • XS)",
+    "description": "The ultimate authority and visionary leaders of Espada. Commands all operations and sets our destiny.",
+    "badge": "Leadership",
+    "members": [
+      {
+        "name": "ᴏʙɪᴛᴏ",
+        "rank": "SZ"
+      },
+      {
+        "name": "ᴀɪᴢᴇɴ ꜱᴏꜱᴜᴋᴇ",
+        "rank": "XS"
+      }
+    ]
+  },
+  {
+    "id": "x-tier",
+    "rankNumber": "X",
+    "title": "X-Tier Potentials",
+    "description": "High-potential members with untapped abilities. Less active but possess exceptional talent when they engage.",
+    "badge": "Potential",
+    "members": [
+      {
+        "name": "MrJT",
+        "rank": "X"
+      }
+    ]
+  },
+  {
+    "id": "s-dot",
+    "rankNumber": "S•",
+    "title": "Supreme S• Warriors",
+    "description": "Supreme fighters who've proven themselves in battle and demonstrate exceptional prowess.",
+    "badge": "Supreme",
+    "members": [
+      {
+        "name": "ꜱᴜᴘᴇʀɪᴏʀ",
+        "rank": "S•"
+      }
+    ]
+  },
+  {
+    "id": "s-plus-plus",
+    "rankNumber": "S++",
+    "title": "Elite S++ Warriors",
+    "description": "Top tier warriors with exceptional skills and unmatched dedication to the clan.",
+    "badge": "Elite+",
+    "members": [
+      {
+        "name": "DARSH",
+        "rank": "S++"
+      }
+    ]
+  },
+  {
+    "id": "s-plus",
+    "rankNumber": "S+",
+    "title": "Elite S+ Warriors",
+    "description": "Top tier warriors with exceptional skills and unmatched dedication to the clan.",
+    "badge": "Elite",
+    "members": [
+      {
+        "name": "Dalla Penguin",
+        "rank": "S+"
+      }
+    ]
+  },
+  {
+    "id": "s-tier",
+    "rankNumber": "S",
+    "title": "S-Rank Warriors",
+    "description": "Skilled fighters who demonstrate strong combat abilities and clan loyalty.",
+    "badge": "Skilled",
+    "members": []
+  },
+  {
+    "id": "a-plus",
+    "rankNumber": "A+",
+    "title": "Advanced A+ Members",
+    "description": "Highly skilled members demonstrating advanced combat abilities and clan commitment.",
+    "badge": "Advanced",
+    "members": [
+      {
+        "name": "BallZ",
+        "rank": "A+"
+      },
+      {
+        "name": "DeVansh>>",
+        "rank": "A+"
+      }
+    ]
+  },
+  {
+    "id": "a-tier",
+    "rankNumber": "A",
+    "title": "A-Rank Members",
+    "description": "Capable warriors on the frontlines executing strategies with precision.",
+    "badge": "Capable",
+    "members": [
+      {
+        "name": "ᴇʀᴀ.ᴠᴏɪᴅ",
+        "rank": "A"
+      }
+    ]
+  },
+  {
+    "id": "a-minus",
+    "rankNumber": "A-",
+    "title": "Rising A- Fighters",
+    "description": "Dedicated members climbing the ranks and proving their worth in combat.",
+    "badge": "Rising",
+    "members": [
+      {
+        "name": "ᴀʏᴜꜱʜ",
+        "rank": "A-"
+      }
+    ]
+  }
+]
